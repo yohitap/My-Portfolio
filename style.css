@@ -320,3 +320,79 @@ section {
 .project-link:hover {
   gap: 0.6rem;
 }
+
+
+#contact {
+  background: #1d1d1f;
+  max-width: 100%;
+  border-top: 0.5px solid var(--border);
+}
+
+#contact .section-label,
+#contact .section-title,
+#contact .section-text {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#contact .section-label {
+  color: #6e6e73;
+}
+
+#contact .section-title {
+  color: #f5f5f7;
+}
+
+#contact .section-text {
+  color: #6e6e73;
+  margin-bottom: 2rem;
+}
+
+.contact-email {
+  display: block;
+  max-width: 900px;
+  margin: 0 auto 2.5rem;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  color: #f5f5f7;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid #3a3a3c;
+  padding-bottom: 0.5rem;
+  transition: color 0.2s ease;
+}
+
+.contact-email:hover {
+  color: var(--accent);
+}
+
+.contact-links {
+  list-style: none;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-links li {
+  border-top: 0.5px solid #3a3a3c;
+}
+
+.contact-links li:last-child {
+  border-bottom: 0.5px solid #3a3a3c;
+}
+
+.contact-links a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1rem 0;
+  color: #86868b;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.2s ease;
+}
+
+.contact-links a:hover {
+  color: #f5f5f7;
+}
