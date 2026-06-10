@@ -132,9 +132,6 @@
   </footer>
 
   <script>
-    // This watches every .reveal element
-    // When it enters the screen, it adds the class "visible"
-    // That triggers the CSS transition above
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -147,6 +144,25 @@
     document.querySelectorAll('.reveal').forEach(el => {
       observer.observe(el);
     });
+
+    
+
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.nav-links a');
+
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(link => link.classList.remove('active'));
+      const id = entry.target.getAttribute('id');
+      const activeLink = document.querySelector(`.nav-links a[href="#${id}"]`);
+      if (activeLink) activeLink.classList.add('active');
+    }
+  });
+}, { threshold: 0.4 });
+
+sections.forEach(section => sectionObserver.observe(section));
+
   </script>
 </body>
 </html>
