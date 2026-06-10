@@ -421,3 +421,45 @@ footer p {
   opacity: 1;
   transform: translateY(0);
 }
+
+
+@media (max-width: 768px) {
+
+  
+  .nav-links {
+    display: none;
+  }
+
+  
+  #home {
+    padding: 5rem 1.5rem 3rem;
+  }
+
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  
+  section {
+    padding: 4rem 1.5rem;
+  }
+
+  
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  
+  .contact-email {
+    font-size: 1.1rem;
+  }
+
+}
