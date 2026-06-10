@@ -39,9 +39,9 @@
 
   
   <section id="about">
-    <p class="section-label">01 — About Me</p>
-    <h2 class="section-title">Who I Am</h2>
-    <p class="section-text">
+    <p class="section-label reveal">01 — About Me</p>
+    <h2 class="section-title reveal">Who I Am</h2>
+    <p class="section-text reveal">
       I am an aspiring Full-Stack Web Developer with a strong interest 
       in building clean, user-friendly web applications. I enjoy turning 
       ideas into real projects using modern web technologies and continuously 
@@ -54,8 +54,8 @@
   </section>
 
   <section id="skills">
-    <p class="section-label">02 — Skills</p>
-    <h2 class="section-title">What I Know</h2>
+    <p class="section-label reveal">02 — Skills</p>
+    <h2 class="section-title reveal">What I Know</h2>
     <div class="skills-grid">
 
       <div class="skill-group">
@@ -82,8 +82,8 @@
 
   
   <section id="projects">
-    <p class="section-label">03 — Projects</p>
-    <h2 class="section-title">Things I've Built</h2>
+    <p class="section-label reveal">03 — Projects</p>
+    <h2 class="section-title reveal">Things I've Built</h2>
     <div class="projects-grid">
 
       <div class="project-card">
@@ -111,9 +111,9 @@
 
   
   <section id="contact">
-    <p class="section-label">04 — Contact</p>
-    <h2 class="section-title">Let's Connect</h2>
-    <p class="section-text">
+    <p class="section-label reveal">04 — Contact</p>
+    <h2 class="section-title reveal">Let's Connect</h2>
+    <p class="section-text reveal">
       I'm always open to connecting with fellow learners and developers.
     </p>
     <a href="mailto:yohitapolavarapu12@gmail.com" class="contact-email">
@@ -131,5 +131,22 @@
     <p>© 2025 Yohita Polavarapu </p>
   </footer>
 
+  <script>
+    // This watches every .reveal element
+    // When it enters the screen, it adds the class "visible"
+    // That triggers the CSS transition above
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
 </body>
 </html>
